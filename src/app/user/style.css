@@ -1,0 +1,36 @@
+.input{
+    display:block;
+    margin: 16px auto;
+    width: 450px;
+    height: 30px;
+}
+
+.btn{
+    display:block;
+    margin: 16px auto;
+    width: 450px;
+    height: 30px;
+    cursor: pointer;
+}
+
+h1{
+    text-align: center;
+    margin-top: 50px;
+}
+
+.spn{
+ font-size: 15px;
+ color: blue;
+ margin-left: 0px;
+   
+}
+.file{
+    text-align: center;
+  
+    height: 30px;
+}
+
+.img{
+  width: 80%;
+  margin:auto;
+}

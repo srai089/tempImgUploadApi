@@ -15,7 +15,7 @@ export default function Page(props){
     const _id=props.params.userid;
 
     const getUser = async ()=>{
-        let resp= await fetch(`http://localhost:3000/api/user/${_id}`);
+        let resp= await fetch(`${process.env.HOST}/api/user/${_id}`);
         resp= await resp.json();
         console.log(resp)
         setData({
@@ -29,7 +29,7 @@ export default function Page(props){
         getUser()
     },[])
    const updateUser = async ()=>{
-    let resp= await fetch(`http://localhost:3000/api/user/${_id}`,{
+    let resp= await fetch(`${process.env.HOST}/api/user/${_id}`,{
         method:"PUT",
         body:JSON.stringify(data)
     },

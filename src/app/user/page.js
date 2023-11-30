@@ -7,6 +7,7 @@ export default function Page(){
     const [user, setUser]= useState({
         name:"",
         age:"",
+        img:"",
         address:""
     });
     // const [file, setFile]= useState(null);
@@ -15,7 +16,7 @@ export default function Page(){
     }
     const submit = async(e)=>{
         e.preventDefault()
-        let resp = await fetch("http://localhost:3000/api/user",{
+        let resp = await fetch(`${process.env.HOST}/api/user`,{
             method:"POST",
             body: JSON.stringify(user)
         });
@@ -31,6 +32,7 @@ export default function Page(){
         }
     };
     const fileChange = async (e)=>{
+        console.log("process", process.env.DB)
         if(!user.name || !user.age || !user.address){
             alert("Enter all fields before uploading image");
             return;
@@ -51,7 +53,7 @@ export default function Page(){
             data.set('file', file);
             
           
-            let resp= await fetch("http://localhost:3000/api/upload",{
+            let resp= await fetch(`${process.env.NODE_ENV}/api/upload`,{
                 method:"POST",
                 headers:{
                    "imgname":imgname 

@@ -8,7 +8,7 @@ import Image from "next/image";
 
 
 const userDetail = async()=>{
-    let resp= await fetch("http://localhost:3000/api/user", {cache:"no-cache"});
+    let resp= await fetch(`${process.env.HOST}/api/user`, {cache:"no-cache"});
     resp = await resp.json();
     return resp.msg;
 }

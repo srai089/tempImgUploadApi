@@ -16,7 +16,7 @@ export default function Page(){
     }
     const submit = async(e)=>{
         e.preventDefault()
-        let resp = await fetch(`${process.env.HOST}/api/user`,{
+        let resp = await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/user`,{
             method:"POST",
             body: JSON.stringify(user)
         });
@@ -53,7 +53,7 @@ export default function Page(){
             data.set('file', file);
             
           
-            let resp= await fetch(`${process.env.NODE_ENV}/api/upload`,{
+            let resp= await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/upload`,{
                 method:"POST",
                 headers:{
                    "imgname":imgname 

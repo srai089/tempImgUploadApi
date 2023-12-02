@@ -15,7 +15,7 @@ export default function Page(props){
     const _id=props.params.userid;
 
     const getUser = async ()=>{
-        let resp= await fetch(`${process.env.HOST}/api/user/${_id}`);
+        let resp= await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/user/${_id}`);
         resp= await resp.json();
         console.log(resp)
         setData({

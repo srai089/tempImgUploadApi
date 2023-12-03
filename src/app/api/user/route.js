@@ -14,7 +14,7 @@ export async function GET() {
 }
 
 export async function POST(req, content) {
-    console.log("host", process.env.HOST)
+    
     let data= await req.json();
    
     const userData= new User(data)

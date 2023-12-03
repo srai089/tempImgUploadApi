@@ -28,11 +28,12 @@ export default function Page(){
                 age:"",
                 img:"",
                 address:""
-            })
+            });
+            router.push('/');
         }
     };
     const fileChange = async (e)=>{
-        console.log("process", process.env.DB)
+     
         if(!user.name || !user.age || !user.address){
             alert("Enter all fields before uploading image");
             return;
